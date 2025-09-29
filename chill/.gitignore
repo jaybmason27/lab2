@@ -1,0 +1,15 @@
+
+# Ignore compiled binary
+chill
+
+# Emacs backup and scratch files
+*~
+\#*\#
+.\#*
+
+# MacOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*

@@ -1,0 +1,54 @@
+# zero arguments
+./chill
+  Temp   Wind  Chill
+ -----  -----  -----
+ -10.0    5.0  -22.3
+ -10.0   10.0  -28.3
+ -10.0   15.0  -32.2
+
+   0.0    5.0  -10.5
+   0.0   10.0  -15.9
+   0.0   15.0  -19.4
+
+  10.0    5.0    1.2
+  10.0   10.0   -3.5
+  10.0   15.0   -6.6
+
+  20.0    5.0   13.0
+  20.0   10.0    8.9
+  20.0   15.0    6.2
+
+  30.0    5.0   24.7
+  30.0   10.0   21.2
+  30.0   15.0   19.0
+
+  40.0    5.0   36.5
+  40.0   10.0   33.6
+  40.0   15.0   31.8
+
+
+# one argument
+./chill 32
+  Temp   Wind  Chill
+ -----  -----  -----
+  32.0    5.0   27.1
+  32.0   10.0   23.7
+  32.0   15.0   21.6
+
+# two arguments
+./chill 32.5 10
+  Temp   Wind  Chill
+ -----  -----  -----
+  32.5   10.0   24.3
+
+# temperature out of range
+./chill 55
+./chill: Temperature must be less than or equal to 50.0 degrees Fahrenheit
+
+# wind speed out of range
+./chill 10 0
+./chill: Wind velocity must be greater than or equal to 0.5 MPH
+
+# usage with too many args
+./chill 10 5 7
+Usage: ./chill [temperature] [velocity]
