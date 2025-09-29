@@ -1,0 +1,44 @@
+# test reading from stdin (echo pipe)
+echo "Hello world" | ./words
+Hello
+world
+
+# test reading from a file
+echo "This is a test file." > test1.txt
+./words test1.txt
+This
+is
+a
+test
+file
+
+# test reading multiple files
+echo "Second file." > test2.txt
+./words test1.txt test2.txt
+This
+is
+a
+test
+file
+Second
+file
+
+# test using '-' to include stdin in sequence
+echo "inline stdin" | ./words test1.txt - test2.txt
+This
+is
+a
+test
+file
+inline
+stdin
+Second
+file
+
+# test with empty file
+touch empty.txt
+./words empty.txt
+
+# test with invalid file
+./words nosuchfileexists.txt
+words: cannot open file nosuchfileexists.txt
