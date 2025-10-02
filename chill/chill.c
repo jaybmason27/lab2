@@ -1,5 +1,5 @@
 /*
- * chill.c     Jay Mason     October 2025
+ * chill.c     Jay Mason     October 2, 2025
  *
  * This program calculates the wind chill factor given a temperature (F)
  * and wind velocity (mph). It supports three modes:

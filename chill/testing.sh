@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# testing.sh     Jay Mason     October 2025
+# testing.sh     Jay Mason     October 2, 2025
 #
 # This script runs a sequence of test cases for chill.c.
 # It demonstrates correctness for valid input, as well as
