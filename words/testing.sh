@@ -1,3 +1,16 @@
+#!/bin/bash
+#
+# testing.sh     Jay Mason     October 2025
+#
+# This script runs a sequence of test cases for words.c.
+# It demonstrates correctness for valid input sources,
+# proper handling of stdin and multiple files, as well
+# as error handling for invalid files.
+#
+# Usage:
+#   bash -v testing.sh >& testing.out
+#
+
 # test reading from stdin (echo pipe)
 echo "Hello world" | ./words
 

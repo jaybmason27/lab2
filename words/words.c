@@ -1,9 +1,39 @@
+/*
+ * words.c     Jay Mason     October 2025
+ *
+ * This program breaks input into words, printing one word per line.
+ * Input can be from stdin or from files listed as command-line arguments.
+ *
+ * Behavior:
+ *   - No arguments: read from stdin.
+ *   - One or more filenames: read each file in sequence.
+ *   - Special filename "-" indicates reading from stdin at that point.
+ *
+ * A word is defined as a maximal sequence of alphabetic characters
+ *
+ * Errors:
+ *   - If a file cannot be opened, an error message is written to stderr,
+ *     and the program exits with status 1.
+ *
+ * Exit codes:
+ *   - 0 for success
+ *   - 1 for failure to open file
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
 
-// Process file and print words one per line
+
+/* ********************************************
+ * process_file()
+ *
+ * Reads characters from the given file pointer.
+ * Collects alphabetic sequences into words and
+ * prints each word on its own line.
+ *
+ * ******************************************** */
 void process_file(FILE *fp) {
     int c;
     char buffer[1024];
@@ -32,6 +62,13 @@ void process_file(FILE *fp) {
     }
 }
 
+/* ********************************************
+ * main()
+ *
+ * determines input source(s) and
+ * calls process_file() accordingly.
+ *
+ * ******************************************** */
 int main(int argc, char *argv[]) {
     if (argc == 1) {
         // No filenames: read from stdin
