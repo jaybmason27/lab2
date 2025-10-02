@@ -1,3 +1,16 @@
+#!/bin/bash
+#
+# testing.sh     Jay Mason     October 2, 2025
+#
+# This script runs a sequence of test cases for histo.c.
+# It demonstrates histogram generation for inputs that fit
+# within the initial range, as well as automatic scaling of
+# bin sizes when larger values are encountered.
+#
+# Usage:
+#   bash -v testing.sh >& testing.out
+#
+
 # test basic range with numbers 0–15
 echo "3 -4 5 1 7 0 8 0 15 12 3 5 3 3 3 3 3" | ./histo
 
