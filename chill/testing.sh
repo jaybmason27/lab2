@@ -1,3 +1,14 @@
+#!/bin/bash
+#
+# testing.sh     Jay Mason     October 2025
+#
+# This script runs a sequence of test cases for chill.c.
+# It demonstrates correctness for valid input, as well as
+# appropriate error handling for invalid input cases.
+#
+# Usage:
+#   bash -v testing.sh >& testing.out
+
 # zero arguments
 ./chill
 
