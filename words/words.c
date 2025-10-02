@@ -1,5 +1,5 @@
 /*
- * words.c     Jay Mason     October 2025
+ * words.c     Jay Mason     October 2, 2025
  *
  * This program breaks input into words, printing one word per line.
  * Input can be from stdin or from files listed as command-line arguments.
